@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lingdaoyi.cloud.mapper.CurrencyExchangeRecordMapper" >
+  <resultMap id="CurrencyExchangeRecordMap" type="com.lingdaoyi.cloud.entity.CurrencyExchangeRecord" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="account_id" property="accountId" jdbcType="BIGINT" />
+    <result column="account_currency_name" property="accountCurrencyName" jdbcType="VARCHAR" />
+    <result column="account_currency_sort" property="accountCurrencySort" jdbcType="VARCHAR" />
+    <result column="account_exchange_sum" property="accountExchangeSum" jdbcType="DECIMAL" />
+    <result column="account_currency_sign" property="accountCurrencySign" jdbcType="VARCHAR" />
+    <result column="account_flag_url" property="accountFlagUrl" jdbcType="VARCHAR" />
+    <result column="exchange_currency_name" property="exchangeCurrencyName" jdbcType="VARCHAR" />
+    <result column="exchange_currency_sort" property="exchangeCurrencySort" jdbcType="VARCHAR" />
+    <result column="exchange_currency_sum" property="exchangeCurrencySum" jdbcType="DECIMAL" />
+    <result column="exchange_currency_sign" property="exchangeCurrencySign" jdbcType="VARCHAR" />
+    <result column="exchange_flag_url" property="exchangeFlagUrl" jdbcType="VARCHAR" />
+    <result column="exchange_rate_ratio" property="exchangeRateRatio" jdbcType="VARCHAR" />
+    <result column="exchange_time" property="exchangeTime" jdbcType="TIMESTAMP" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="is_deleted" property="isDeleted" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

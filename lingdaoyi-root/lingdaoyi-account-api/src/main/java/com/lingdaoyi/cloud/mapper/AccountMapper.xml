@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lingdaoyi.cloud.mapper.AccountMapper" >
+  <resultMap id="BaseResultMap" type="com.lingdaoyi.cloud.entity.account.Account" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="login_name" property="loginName" jdbcType="VARCHAR" />
+    <result column="head_url" property="headUrl" jdbcType="VARCHAR" />
+    <result column="is_auth" property="isAuth" jdbcType="TINYINT" />
+    <result column="real_name" property="realName" jdbcType="VARCHAR" />
+    <result column="country_id" property="countryId" jdbcType="BIGINT" />
+    <result column="country_name" property="countryName" jdbcType="VARCHAR" />
+    <result column="currency_name" property="currencyName" jdbcType="VARCHAR" />
+    <result column="identity_id" property="identityId" jdbcType="BIGINT" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="labor_url" property="laborUrl" jdbcType="VARCHAR" />
+    <result column="account_level" property="accountLevel" jdbcType="TINYINT" />
+    <result column="login_password" property="loginPassword" jdbcType="VARCHAR" />
+    <result column="pay_password" property="payPassword" jdbcType="VARCHAR" />
+    <result column="transferKey" property="transferkey" jdbcType="VARCHAR" />
+    <result column="fingerprint_pay" property="fingerprintPay" jdbcType="TINYINT" />
+    <result column="account_type" property="accountType" jdbcType="TINYINT" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="client_type" property="clientType" jdbcType="TINYINT" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="is_deleted" property="isDeleted" jdbcType="TINYINT" />
+  </resultMap>
+</mapper>

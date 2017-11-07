@@ -1,0 +1,60 @@
+server:
+  port: 10811
+#  context-path: /emc/api/
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+    
+zuul:
+  routes:
+    lingdaoyi-account-api:
+      path: /emc/api/accountApi/**
+      url: http://localhost:10813/
+    lingdaoyi-authenticate-api:
+      path: /emc/api/authenticateApi/**
+      url: http://localhost:10815/
+    lingdaoyi-system-api:
+      path: /emc/api/systemApi/**
+      url: http://localhost:10814/
+    lingdaoyi-transfer-api:
+      path: /emc/api/transferApi/**
+      url: http://localhost:10816/
+
+#zuul:
+#  ignoredServices: '*'
+#  routes:
+#    lingdaoyi-account-api:
+#      path: /accountApi/**
+#      sensitiveHeaders: null
+#      serviceId: lingdaoyi-account-api
+#    lingdaoyi-authenticate-api:
+#      path: /authenticateApi/**
+#      sensitiveHeaders: null
+#      serviceId: lingdaoyi-authenticate-api
+#ribbon:
+#  eureka:
+#    enabled: false
+#lingdaoyi-account-api:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.ZoneAvoidanceRule
+#    listOfServers: http://47.52.131.232:10813,http://47.52.131.232:10819
+#lingdaoyi-authenticate-api:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.ZoneAvoidanceRule
+#    listOfServers: http://47.52.131.232:10815
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000

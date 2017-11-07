@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lingdaoyi.cloud.mapper.CurrencyExchangeOrderMapper">
+	<resultMap id="CurrencyExchangeOrderResultMap" type="CurrencyExchangeOrder">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="account_id" property="accountId" jdbcType="BIGINT" />
+		<result column="ordernum" property="ordernum" jdbcType="VARCHAR" />
+		<result column="from_currency" property="fromCurrency" jdbcType="VARCHAR" />
+		<result column="from_amount" property="fromAmount" jdbcType="DECIMAL" />
+		<result column="to_currency" property="toCurrency" jdbcType="VARCHAR" />
+		<result column="to_amount" property="toAmount" jdbcType="DECIMAL" />
+		<result column="rate" property="rate" jdbcType="DECIMAL" />
+		<result column="exchange_time" property="exchangeTime" jdbcType="TIMESTAMP" />
+		<result column="sponsor_id" property="sponsorId" jdbcType="BIGINT" />
+		<result column="old_balance" property="oldBalance" jdbcType="DECIMAL" />
+		<result column="new_balance" property="newBalance" jdbcType="DECIMAL" />
+		<result column="fee" property="fee" jdbcType="DECIMAL" />
+		<result column="order_type" property="orderType" jdbcType="INTEGER" />
+		<result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+		<result column="is_deleted" property="isDeleted" jdbcType="INTEGER" />
+		<result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+	</resultMap>
+</mapper>

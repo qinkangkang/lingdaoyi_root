@@ -1,0 +1,48 @@
+server:
+  port: 10815
+spring:
+  application:
+    name: lingdaoyi-authenticate-api
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.itmuch: DEBUG
+hystrix:  
+  command:  
+      default:  
+        execution:  
+          isolation:  
+            thread:  
+              timeoutInMilliseconds: 5000 
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+        defaultZone: http://user:password123@localhost:10810/eureka
+#       defaultZone: http://user:password123@47.52.131.232:10810/eureka
+  instance:
+    leaseRenewalIntervalInSeconds: 1 #接受心跳间隔  单位秒
+    leaseExpirationDurationInSeconds: 2  #接受到最后一个心跳后删除服务  单位秒
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+mybatis:
+    type-aliases-package: com.lingdaoyi.cloud.entity
+#    mapper-locations: classpath:mapper/*.xml
+
+mapper:
+    mappers:
+        - com.lingdaoyi.cloud.baseMapper.BaseMapper
+    not-empty: false
+    identity: MYSQL
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+    

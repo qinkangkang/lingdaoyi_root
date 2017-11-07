@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lingdaoyi.cloud.mapper.SysImageMapper" >
+  <resultMap id="SysImageMap" type="com.lingdaoyi.cloud.entity.SysImage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="fileName" property="filename" jdbcType="VARCHAR" />
+    <result column="storeFileName" property="storefilename" jdbcType="VARCHAR" />
+    <result column="storefileExt" property="storefileext" jdbcType="VARCHAR" />
+    <result column="relativePath" property="relativepath" jdbcType="VARCHAR" />
+    <result column="fileSize" property="filesize" jdbcType="BIGINT" />
+    <result column="imageWidth" property="imagewidth" jdbcType="INTEGER" />
+    <result column="imageHeight" property="imageheight" jdbcType="INTEGER" />
+    <result column="uploadTime" property="uploadtime" jdbcType="TIMESTAMP" />
+    <result column="uploaderId" property="uploaderid" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="entityId" property="entityid" jdbcType="BIGINT" />
+    <result column="entityType" property="entitytype" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: lingdaoyi-api-gateway
+#encrypt:
+#  fail-on-error: false 
+eureka:     
+  client:
+    disable-delta: true
+#    allow-redirects: true
+    service-url:
+#      defaultZone: http://user:password123@localhost:10810/lingdaoyi-eureka/eureka
+       defaultZone: http://user:password123@localhost:10810/eureka
+#       defaultZone: http://user:password123@47.52.131.232:10810/eureka
+  instance:
+    leaseRenewalIntervalInSeconds: 5 #接受心跳间隔  单位秒
+    leaseExpirationDurationInSeconds: 3  #接受到最后一个心跳后删除服务  单位秒
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}

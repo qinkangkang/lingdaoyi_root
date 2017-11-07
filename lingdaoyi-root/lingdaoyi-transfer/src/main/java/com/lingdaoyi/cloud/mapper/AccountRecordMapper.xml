@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lingdaoyi.cloud.mapper.AccountRecordMapper">
+	<resultMap id="AccountRecordResultMap" type="AccountRecord">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="account_id" property="accountId" jdbcType="BIGINT" />
+		<result column="pay_no" property="payNo" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="INTEGER" />
+		<result column="blank_card_id" property="blankCardId" jdbcType="BIGINT" />
+		<result column="transfer_money" property="transferMoney"
+			jdbcType="DECIMAL" />
+		<result column="currency_name" property="currencyName"
+			jdbcType="VARCHAR" />
+		<result column="transfer_instructions" property="transferInstructions"
+			jdbcType="VARCHAR" />
+		<result column="receive_account_id" property="receiveAccountId"
+			jdbcType="BIGINT" />
+		<result column="receive_card_id" property="receiveCardId"
+			jdbcType="BIGINT" />
+		<result column="is_success" property="isSuccess" jdbcType="VARCHAR" />
+		<result column="gps" property="gps" jdbcType="VARCHAR" />
+		<result column="address_ip" property="addressIp" jdbcType="VARCHAR" />
+		<result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+		<result column="is_deleted" property="isDeleted" jdbcType="TINYINT" />
+		<result column="exchange_id" property="exchangeId" jdbcType="BIGINT" />
+		<result column="payAdvance_orderNO" property="payAdvanceOrder_NO"
+			jdbcType="BIGINT" />
+		<result column="payAdvance_isSuccess" property="payAdvance_isSuccess"
+			jdbcType="VARCHAR" />
+		<result column="remarks" property="remarks" jdbcType="VARCHAR" />
+		<result column="transfer_way" property="transferWay" jdbcType="VARCHAR" />
+	</resultMap>
+
+
+	<resultMap id="AccountRecordByMonthResultMap" type="AccountRecordByMonth">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="month" property="month" jdbcType="VARCHAR" />
+		<result column="account_id" property="accountId" jdbcType="BIGINT" />
+		<result column="pay_no" property="payNo" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="INTEGER" />
+		<result column="blank_card_id" property="blankCardId" jdbcType="BIGINT" />
+		<result column="transfer_money" property="transferMoney"
+			jdbcType="DECIMAL" />
+		<result column="transfer_instructions" property="transferInstructions"
+			jdbcType="VARCHAR" />
+		<result column="receive_account_id" property="receiveAccountId"
+			jdbcType="BIGINT" />
+		<result column="receive_card_id" property="receiveCardId"
+			jdbcType="BIGINT" />
+		<result column="is_success" property="isSuccess" jdbcType="VARCHAR" />
+		<result column="gps" property="gps" jdbcType="VARCHAR" />
+		<result column="address_ip" property="addressIp" jdbcType="VARCHAR" />
+		<result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+		<result column="is_deleted" property="isDeleted" jdbcType="TINYINT" />
+		<result column="exchange_id" property="exchangeId" jdbcType="BIGINT" />
+		<result column="payAdvance_orderNO" property="payAdvanceOrder_NO"
+			jdbcType="BIGINT" />
+		<result column="payAdvance_isSuccess" property="payAdvance_isSuccess"
+			jdbcType="VARCHAR" />
+		<result column="transfer_way" property="transferWay" jdbcType="VARCHAR" />
+		<result column="remarks" property="remarks" jdbcType="VARCHAR" />
+
+	</resultMap>
+</mapper>

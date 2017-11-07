@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lingdaoyi.cloud.mapper.AuthenticationRecordMapper" >
+  <resultMap id="AuthenticationRecordMap" type="com.lingdaoyi.cloud.entity.AuthenticationRecord" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="account_id" property="accountId" jdbcType="BIGINT" />
+    <result column="account_realname" property="accountRealname" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="idcard" property="idcard" jdbcType="VARCHAR" />
+    <result column="bankcard" property="bankcard" jdbcType="VARCHAR" />
+    <result column="bank_name" property="bankName" jdbcType="VARCHAR" />
+    <result column="bank_code" property="bankCode" jdbcType="VARCHAR" />
+    <result column="bank_idcard" property="bankIdcard" jdbcType="VARCHAR" />
+    <result column="bank_realname" property="bankRealname" jdbcType="VARCHAR" />
+    <result column="bank_mobile" property="bankMobile" jdbcType="VARCHAR" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="enkey" property="enkey" jdbcType="VARCHAR" />
+    <result column="is_ok" property="isOk" jdbcType="INTEGER" />
+    <result column="ordersign" property="ordersign" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

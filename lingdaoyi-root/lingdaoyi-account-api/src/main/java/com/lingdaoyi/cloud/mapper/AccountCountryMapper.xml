@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lingdaoyi.cloud.mapper.AccountCountryMapper" >
+  <resultMap id="BaseResultMap" type="com.lingdaoyi.cloud.entity.account.AccountCountry" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="countryName" property="countryname" jdbcType="VARCHAR" />
+    <result column="cityName" property="cityname" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="TINYINT" />
+    <result column="currencyName" property="currencyname" jdbcType="VARCHAR" />
+    <result column="currencySign" property="currencysign" jdbcType="VARCHAR" />
+    <result column="currencySort" property="currencysort" jdbcType="VARCHAR" />
+    <result column="sort" property="sort" jdbcType="DECIMAL" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="is_deleted" property="isDeleted" jdbcType="TINYINT" />
+    <result column="countryFlag" property="countryFlag" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

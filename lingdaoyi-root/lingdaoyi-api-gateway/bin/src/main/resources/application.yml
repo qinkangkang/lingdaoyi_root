@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: lingdaoyi-api-gateway
+server:
+  port: 8002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+zuul:
+  ignoredServices: lingdaoyi-consumer, lingdaoyi-producer #忽略服务
+  routes:
+    consumer:
+      path: /consumer/**
+      serviceId: lingdaoyi-consumer
+    producer:
+      path: /producer/**
+      serviceId: lingdaoyi-producer
+   

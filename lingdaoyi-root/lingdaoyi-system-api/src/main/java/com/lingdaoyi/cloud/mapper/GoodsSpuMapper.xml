@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lingdaoyi.cloud.mapper.GoodsSpuMapper" >
+  <resultMap id="GoodsSpuResultMap" type="com.lingdaoyi.cloud.entity.GoodsSpu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="subName" property="subname" jdbcType="VARCHAR" />
+    <result column="subIcon" property="subicon" jdbcType="BIGINT" />
+    <result column="country_id" property="countryId" jdbcType="BIGINT" />
+    <result column="sponsor_id" property="sponsorId" jdbcType="BIGINT" />
+    <result column="categoryA_id" property="categoryaId" jdbcType="BIGINT" />
+    <result column="categoryB_id" property="categorybId" jdbcType="BIGINT" />
+    <result column="brief" property="brief" jdbcType="VARCHAR" />
+    <result column="detailHtmlUrl" property="detailhtmlurl" jdbcType="VARCHAR" />
+    <result column="purchaseDesc" property="purchasedesc" jdbcType="VARCHAR" />
+    <result column="image1" property="image1" jdbcType="VARCHAR" />
+    <result column="image2" property="image2" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="userId" property="userid" jdbcType="BIGINT" />
+    <result column="onSaleTime" property="onsaletime" jdbcType="TIMESTAMP" />
+    <result column="offSaleTime" property="offsaletime" jdbcType="TIMESTAMP" />
+    <result column="updateTime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="spec" property="spec" jdbcType="VARCHAR" />
+    <result column="limitation" property="limitation" jdbcType="INTEGER" />
+    <result column="total" property="total" jdbcType="INTEGER" />
+    <result column="stock" property="stock" jdbcType="INTEGER" />
+    <result column="saleTotal" property="saletotal" jdbcType="INTEGER" />
+    <result column="presentPrice" property="presentprice" jdbcType="DECIMAL" />
+    <result column="originalPrice" property="originalprice" jdbcType="DECIMAL" />
+    <result column="detail" property="detail" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>
